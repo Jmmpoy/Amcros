@@ -19,9 +19,10 @@
       "@/components/*": ["components/*"],
       "@/helpers/*": ["helpers/*"],
       "@/styles/*": ["styles/*"],
-      "@/public/*": ["public/*"]
+      "@/public/*": ["public/*"],
+      "@videos/*": ["videos/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["video.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

@@ -13,7 +13,7 @@
     "preact"
   ],
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev & npx next-video sync -w",
     "build": "next build",
     "start": "next start",
     "tailwind-config-viewer": "tailwind-config-viewer -o"
@@ -24,6 +24,7 @@
     "next": "^15.3.2",
     "next-images": "^1.8.1",
     "next-seo": "^4.26.0",
+    "next-video": "^2.2.0",
     "postcss-import": "^14.0.0",
     "postcss-nested": "^5.0.5",
     "postcss-preset-env": "^6.7.0",

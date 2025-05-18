@@ -1,10 +1,8 @@
-module.exports = {
+const { withNextVideo } = require("next-video/process");
+
+module.exports = withNextVideo({
   images: {
-    domains: [
-      "http://www.logobook.com/",
-      "http://www.unsplash.com/",
-      "cdn.sanity.io",
-    ],
+    domains: ["www.logobook.com", "www.unsplash.com", "cdn.sanity.io"],
   },
   compiler: {
     removeConsole:
@@ -22,4 +20,4 @@ module.exports = {
 
     return config;
   },
-};
+});
