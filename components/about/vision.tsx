@@ -21,6 +21,7 @@ export const Vision = () => {
 
         <FadeInWhenVisible>
           <div className="space-y-2 text-center flex flex-col justify-center items-center">
+            <p className="text-xl md:text-8xl font-neueRegular uppercase">1</p>
             <h3 className="text-lg md:text-xl font-neueBold uppercase">
               Amcros Institut
             </h3>
@@ -33,6 +34,7 @@ export const Vision = () => {
 
         <FadeInWhenVisible>
           <div className="space-y-2text-center flex flex-col justify-center items-center">
+            <p className="text-xl md:text-8xl font-neueRegular uppercase">2</p>
             <h3 className="text-lg md:text-xl font-neueBold uppercase">
               Amcros Event
             </h3>

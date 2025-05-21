@@ -29,6 +29,7 @@ export default function About() {
       <NextSeo title="About" description="About Amcros" />
       <HeroSection />
       <Manifesto />
+      {/* <Section /> */}
       <Events />
       <Vision />
     </div>

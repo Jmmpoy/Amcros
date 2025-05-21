@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
-import background from "@/public/assets/images/8E2A8178.webp";
+import background from "@/public/assets/images/runway.jpg";
 
 export default function Section() {
   return (
