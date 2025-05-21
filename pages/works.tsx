@@ -11,7 +11,7 @@ const Works = () => {
       <div className="absolute w-full h-full left-0 top-0">
         <Video
           src={amcrosVideo}
-          autoPlay
+          autoPlay={true}
           loop
           muted
           className="w-full h-full object-cover z-50"
