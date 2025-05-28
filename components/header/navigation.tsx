@@ -51,7 +51,7 @@ export default function Navigation({ items }: NavigationProps) {
             variants={item}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
-            className="relative mx-2 text-lg lg:text-xl uppercase"
+            className="relative mx-2 text-lg lg:text-xl uppercase text-white"
           >
             <Link
               href={url}

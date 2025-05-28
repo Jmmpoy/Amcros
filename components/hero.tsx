@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 import Container from "@/components/container";
-
 import Navigation from "./header/navigation";
-import { title } from "process";
+import amcrosVideo from "@videos/amcrosInstitut.mp4";
+import PosterImage from "@/public/assets/images/8E2A8989.webp";
+import Video from "next-video";
+import Instaplay from "player.style/instaplay/react";
+import { useEffect, useRef } from "react";
 
 export default function Hero() {
   const menuItems = [
@@ -12,12 +15,38 @@ export default function Hero() {
     { title: "Instagram", url: "https://www.instagram.com/amcros.events/" },
   ];
 
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      video.muted = true;
+    }
+  }, []);
+
   return (
-    <Container extraClasses="Hero-Container relative">
-      <main className=" h-screen flex flex-col justify-center items-center px-6 ">
-        <div className=" w-[2/3] md:w-1/2 md:max-w-3xl sm:min-w-[550px]  text-center">
+    <div className=" mx-auto w-full   Hero-Container relative overflow-hidden bg-black">
+      {/* VIDÉO EN FOND */}
+      {/* todo :  fix top margin to remove -30px */}
+      <div className="absolute inset-0 top-[-30px] ">
+        <Video
+          ref={videoRef}
+          src={amcrosVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+          controls={false}
+          className="w-screen h-screen"
+        />
+        {/* OVERLAY NOIR */}
+        <div className="absolute inset-0 bg-black opacity-70" />
+      </div>
+      {/* CONTENU */}
+      <main className="relative z-10 h-screen flex flex-col justify-center items-center px-6">
+        <div className="w-full sm:min-w-[550px] md:w-1/2 md:max-w-3xl text-center">
           <motion.p
-            className={`mb-0 font-neueBold uppercase  sm:mb-3 text-5xl lg:text-8xl`}
+            className="mb-0 font-neueBold uppercase sm:mb-3 text-5xl lg:text-8xl text-white"
             key="amcros-title"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -29,6 +58,6 @@ export default function Hero() {
           <Navigation items={menuItems} />
         </div>
       </main>
-    </Container>
+    </div>
   );
 }
