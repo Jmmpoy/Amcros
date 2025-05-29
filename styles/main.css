@@ -174,4 +174,14 @@ p {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+
+    .h-screen-minus-footer {
+      height: calc(100vh - 78px);
+    }
+  
+    @media (min-width: 768px) {
+      .h-screen-minus-footer {
+        height: calc(100vh - 56px);
+      }
+    }
 }

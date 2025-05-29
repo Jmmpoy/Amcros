@@ -2,9 +2,7 @@ import { motion } from "framer-motion";
 import Container from "@/components/container";
 import Navigation from "./header/navigation";
 import amcrosVideo from "@videos/amcrosInstitut.mp4";
-import PosterImage from "@/public/assets/images/8E2A8989.webp";
 import Video from "next-video";
-import Instaplay from "player.style/instaplay/react";
 import { useEffect, useRef } from "react";
 
 export default function Hero() {
@@ -25,10 +23,10 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className=" mx-auto w-full   Hero-Container relative overflow-hidden bg-black">
+    <div className=" mx-auto w-full Hero-Containe h-screen-minus-footer   relative overflow-hidden bg-black">
       {/* VIDÉO EN FOND */}
       {/* todo :  fix top margin to remove -30px */}
-      <div className="absolute inset-0 top-[-30px] ">
+      <div className="absolute inset-0">
         <Video
           ref={videoRef}
           src={amcrosVideo}

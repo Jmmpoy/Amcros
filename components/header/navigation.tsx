@@ -61,7 +61,7 @@ export default function Navigation({ items }: NavigationProps) {
               <AnimatePresence>
                 {hoveredIndex === index && (
                   <motion.div
-                    className="absolute bottom-0 left-0 h-[1px] w-full bg-black origin-left"
+                    className="absolute bottom-0 left-0 h-[1px] w-full bg-white origin-left"
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     exit={{ scaleX: 0 }}
