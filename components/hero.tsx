@@ -7,7 +7,7 @@ import Video from "next-video";
 import { useEffect, useRef, useState } from "react";
 import useIntro from "hooks/useIntro";
 
-export default function Hero({ canFade }) {
+export default function Hero({ canFade }: any) {
   const [hasSeenCover, setHasSeenCover] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const showAnimation = useIntro();

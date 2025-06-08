@@ -1,5 +1,5 @@
 import * as React from "react";
-import Logo from "@/public/assets/logo.png";
+// import Logo from "@/public/assets/logo.png";
 
 const Logo = (props: any) => (
   <svg

@@ -4,7 +4,7 @@ import EventsVideo from "@videos/amcros-events.mov";
 import Instaplay from "next-video";
 import Video from "next-video";
 
-const MediaGrid = ({ columnsNum = 3, medias }) => {
+const MediaGrid = ({ columnsNum = 3, medias }: any) => {
   return (
     <div className={`grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 pb-20 `}>
       {medias &&
