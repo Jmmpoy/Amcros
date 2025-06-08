@@ -9,9 +9,10 @@ interface NavItem {
 
 interface NavigationProps {
   items: NavItem[];
+  canFade: boolean;
 }
 
-export default function Navigation({ items }: NavigationProps) {
+export default function Navigation({ items, canFade }: NavigationProps) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const container = {
@@ -28,54 +29,58 @@ export default function Navigation({ items }: NavigationProps) {
     initial: { opacity: 0 },
     enter: {
       opacity: 1,
-      transition: { duration: 0.6, ease: "easeInOut" },
+      transition: { duration: 0.6, ease: [0.65, 0.05, 0.36, 1] },
     },
     exit: {
       opacity: 0,
-      transition: { duration: 0.6, ease: "easeInOut" },
+      transition: { duration: 0.6, ease: [0.65, 0.05, 0.36, 1] },
     },
   };
 
   return (
     <nav className="flex">
-      <motion.ul
-        variants={container}
-        initial="initial"
-        animate="enter"
-        exit="exit"
-        className="flex flex-col mt-6 lg:flex-row lg:mt-0 justify-between w-full self-center"
-      >
-        {items.map(({ title, url }, index) => (
-          <motion.li
-            key={index}
-            variants={item}
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
-            className="relative mx-2 text-lg lg:text-xl uppercase text-white"
+      <AnimatePresence>
+        {canFade && (
+          <motion.ul
+            variants={container}
+            initial="initial"
+            animate="enter"
+            exit="exit"
+            className="flex flex-col mt-6 lg:flex-row lg:mt-0 justify-between w-full self-center"
           >
-            <Link
-              href={url}
-              className="relative inline-block py-1 font-neueLight"
-            >
-              {title}
-              <AnimatePresence>
-                {hoveredIndex === index && (
-                  <motion.div
-                    className="absolute bottom-0 left-0 h-[1px] w-full bg-white origin-left"
-                    initial={{ scaleX: 0 }}
-                    animate={{ scaleX: 1 }}
-                    exit={{ scaleX: 0 }}
-                    transition={{
-                      duration: 0.3,
-                      ease: "easeInOut",
-                    }}
-                  />
-                )}
-              </AnimatePresence>
-            </Link>
-          </motion.li>
-        ))}
-      </motion.ul>
+            {items.map(({ title, url }, index) => (
+              <motion.li
+                key={index}
+                variants={item}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                className="relative mx-2 text-lg lg:text-xl uppercase text-white"
+              >
+                <Link
+                  href={url}
+                  className="relative inline-block py-1 font-neueLight transition-colors duration-300 hover:text-[#C5A880]"
+                >
+                  {title}
+                  <AnimatePresence>
+                    {hoveredIndex === index && (
+                      <motion.div
+                        className="absolute bottom-0 left-0 h-[1px] w-full bg-[#C5A880] origin-left"
+                        initial={{ scaleX: 0 }}
+                        animate={{ scaleX: 1 }}
+                        exit={{ scaleX: 0 }}
+                        transition={{
+                          duration: 0.3,
+                          ease: [0.65, 0.05, 0.36, 1],
+                        }}
+                      />
+                    )}
+                  </AnimatePresence>
+                </Link>
+              </motion.li>
+            ))}
+          </motion.ul>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }

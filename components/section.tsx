@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
-import background from "@/public/assets/images/runway.jpg";
+import background from "@/public/assets/images/main-event.png";
 
 export default function Section() {
   return (
@@ -15,7 +15,7 @@ export default function Section() {
             src={background}
             fill
             alt="image"
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "contain" }}
             priority
             placeholder="blur"
           />

@@ -7,7 +7,7 @@ import { HeroSection } from "../components/about/hero";
 import Lenis from "lenis";
 import { FadeInWhenVisible } from "@/components/fadeInWhenVisible";
 import { Manifesto } from "@/components/about/manifesto";
-import Section from "@/components/about/section";
+import Section from "@/components/section";
 import { Events } from "@/components/about/events";
 import { Vision } from "@/components/about/vision";
 

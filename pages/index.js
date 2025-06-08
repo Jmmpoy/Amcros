@@ -8,6 +8,10 @@ import Cover from "@/components/cover";
 export default function Home() {
   const containerRef = useRef(null);
   const [showCover, setShowCover] = useState(true);
+  const [canFade, setCanFade] = useState(false);
+  const onCoverAnimationComplete = () => {
+    setCanFade(true);
+  };
 
   return (
     <Layout class="no-scrollbar">
@@ -15,11 +19,11 @@ export default function Home() {
       <div data-scroll-container ref={containerRef} id="scroll-container">
         <div data-scroll-section>
           <LazyMotion features={domAnimation}>
-            {/* <AnimatePresence>
-              {showCover && <Cover onFinish={() => setShowCover(false)} />}
-            </AnimatePresence> */}
+            <AnimatePresence>
+              <Cover onFinish={onCoverAnimationComplete} />
+            </AnimatePresence>
             <m.div initial="initial" animate="enter" exit="exit">
-              <Hero />
+              <Hero canFade={canFade} />
             </m.div>
           </LazyMotion>
         </div>

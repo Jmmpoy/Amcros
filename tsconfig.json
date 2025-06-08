@@ -23,6 +23,6 @@
       "@videos/*": ["videos/*"]
     }
   },
-  "include": ["video.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["video.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx", "components/cover.js"],
   "exclude": ["node_modules"]
 }

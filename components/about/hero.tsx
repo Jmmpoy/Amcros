@@ -19,7 +19,7 @@ export const HeroSection = () => {
       {/* Overlay + Texte */}
       <div className="absolute inset-0 bg-opacity-70 bg-gradient-to-t from-black via-black/50 to-transparent flex flex-col justify-center items-start px-8 md:px-18 lg:px-24">
         <motion.h1
-          className="text-white text-7xl md:text-[10rem] lg:text-[11rem] leading-[0.9] tracking-tight uppercase font-neueBold"
+          className="text-white text-7xl md:text-[10rem] lg:text-[11rem] leading-[0.9] tracking-tight uppercase font-neueBold hover:text-gold transition-colors duration-300"
           variants={delayedFade}
           initial="initial"
           animate="enter"

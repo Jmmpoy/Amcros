@@ -16,7 +16,7 @@ const copyright = {
 
 export default function Footer() {
   return (
-    <footer className="fixed bottom-0 w-full bg-white mb-0">
+    <footer className="fixed bottom-0 w-full bg-[#F9F4EF] mb-0">
       <Container>
         <div className="py-4 flex flex-col md:flex-row justify-between md:items-center">
           <motion.div
@@ -28,7 +28,7 @@ export default function Footer() {
           >
             <a
               href={copyright.href}
-              className="text-[12px] font-founders uppercase hover:text-gray-500 focus:text-gray-500"
+              className="text-[12px] font-founders uppercase text-[#2E1E1E] hover:text-[#C5A880] transition-colors duration-300"
             >
               {copyright.text}
             </a>
@@ -45,7 +45,7 @@ export default function Footer() {
               <Link
                 key={title}
                 href={href}
-                className="text-[12px] font-founders uppercase hover:text-gray-500 focus:text-gray-500"
+                className="text-[12px] font-founders uppercase text-[#2E1E1E] hover:text-[#C5A880] transition-colors duration-300"
               >
                 {title}
               </Link>

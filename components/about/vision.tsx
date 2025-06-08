@@ -26,8 +26,9 @@ export const Vision = () => {
               Amcros Institut
             </h3>
             <p className="text-base md:text-lg font-neueRegular max-w-[30rem]">
-              Formation professionnelle, valorisation des métiers de la beauté,
-              accompagnement des talents émergents.
+              Un lieu de beauté, de bien-être et d’avenir. Très bientôt, un
+              institut pensé pour révéler les talents, former avec passion et
+              inspirer la nouvelle génération
             </p>
           </div>
         </FadeInWhenVisible>

@@ -28,21 +28,10 @@ module.exports = {
     extend: {
       colors: {
         black: "#000",
-        white: "#f5f3ef",
+        white: "#f9f4ef",
         gray: "#888888",
-        orange: "#f77e5e",
-        blue: "#2677bb",
-        cyan: "#1aa9bc",
-        fushia: "#de3d83",
-        palette: {
-          blue: "#105099",
-          light: "#EAE9E5",
-        },
-        "example-color": {
-          light: "#EAE9E5",
-          DEFAULT: "#d18d67",
-          dark: "#ce8860",
-        },
+        gold: "#C5A880",
+        brown: "#2E1E1E",
       },
       height: (theme) => ({
         "50vh": "50vh",

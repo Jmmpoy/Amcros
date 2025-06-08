@@ -1,19 +1,28 @@
+"use client";
 import { motion } from "framer-motion";
 import Container from "@/components/container";
 import Navigation from "./header/navigation";
 import amcrosVideo from "@videos/amcrosInstitut.mp4";
 import Video from "next-video";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import useIntro from "hooks/useIntro";
 
-export default function Hero() {
+export default function Hero({ canFade }) {
+  const [hasSeenCover, setHasSeenCover] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const showAnimation = useIntro();
+
+  useEffect(() => {
+    const seen = sessionStorage.getItem("hasSeenCover");
+    if (seen === "true") setHasSeenCover(true);
+  }, []);
+
   const menuItems = [
     { title: "Selected Works", url: "/works" },
     { title: "About", url: "/about" },
     { title: "Amcros Events", url: "/events" },
     { title: "Instagram", url: "https://www.instagram.com/amcros.events/" },
   ];
-
-  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -22,10 +31,13 @@ export default function Hero() {
     }
   }, []);
 
+  console.log("showanim", showAnimation);
+
+  const shouldFade = canFade || !showAnimation;
+
   return (
-    <div className=" mx-auto w-full Hero-Containe h-screen-minus-footer   relative overflow-hidden bg-black">
+    <div className="mx-auto w-full Hero-Containe h-screen-minus-footer relative overflow-hidden bg-black">
       {/* VIDÉO EN FOND */}
-      {/* todo :  fix top margin to remove -30px */}
       <div className="absolute inset-0">
         <Video
           ref={videoRef}
@@ -40,22 +52,22 @@ export default function Hero() {
         {/* OVERLAY NOIR */}
         <div className="absolute inset-0 bg-black opacity-70" />
       </div>
+
       {/* CONTENU */}
-      <main className="relative z-10 h-screen flex flex-col justify-center items-center px-6">
+      <motion.main className="relative z-10 h-screen flex flex-col justify-center items-center px-6">
         <div className="w-full sm:min-w-[550px] md:w-1/2 md:max-w-3xl text-center">
           <motion.p
-            className="mb-0 font-neueBold uppercase sm:mb-3 text-5xl lg:text-8xl text-white"
+            className="mb-0 font-neueBold uppercase sm:mb-3 text-5xl lg:text-8xl text-white hover:text-[#C5A880] transition-colors duration-300"
             key="amcros-title"
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
+            animate={{ opacity: shouldFade ? 1 : 0 }}
+            transition={{ duration: 0.6, ease: [0.65, 0.05, 0.36, 1] }}
           >
             amcros
           </motion.p>
-          <Navigation items={menuItems} />
+          <Navigation items={menuItems} canFade={shouldFade} />
         </div>
-      </main>
+      </motion.main>
     </div>
   );
 }
