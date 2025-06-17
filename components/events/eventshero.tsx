@@ -1,33 +1,45 @@
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { delayedFade } from "@/helpers/transitions";
-import { motion } from "framer-motion";
-import Container from "../container";
+
 export const EventsHero = () => {
   return (
-    <Container>
-      <div className="mx-auto  w-full lg:w-2/3 h-[60vh]  flex flex-col justify-center">
-        {/* TITRE */}
-        <div className="md:col-start-4 md:col-span-5 col-span-1">
-          <motion.h1
-            className=" text-brown text-4xl md:text-5xl lg:text-6xl leading-[0.9] tracking-tight uppercase font-neueBold text-center hover:text-gold transition-colors duration-300"
-            variants={delayedFade}
-            initial="initial"
-            animate="enter"
-            transition={{ delay: 0.2 }}
-          >
-            Amcros Events
-          </motion.h1>
-        </div>
-
-        {/* DESCRIPTION */}
-
-        {/* TAGLINE (répétée pour continuité sur mobile + desktop) */}
-        <div className="md:col-span-2 col-span-1 mt-4 text-center">
-          <motion.p className=" text-brown text-lg md:text-xl font-neueLight italic">
-            A future where dreaming, creating, and undertaking come together as
-            acts of collective transformation.
-          </motion.p>
-        </div>
+    <section className="relative h-[120vh] w-full overflow-hidden">
+      {/* Motion background */}
+      <div className="absolute inset-0">
+        <div
+          className="w-full h-full bg-cover bg-center"
+          style={{
+            backgroundImage: 'url("/assets/images/events.png")',
+            backgroundPosition: "30% 20%",
+          }}
+        />
       </div>
-    </Container>
+
+      {/* Overlay + Texte */}
+      <div className="absolute inset-0 bg-opacity-70 bg-gradient-to-t from-black via-black/50 to-transparent flex flex-col justify-center items-start px-8 md:px-18 lg:px-24">
+        <motion.h1
+          className="text-white text-7xl md:text-[10rem] lg:text-[11rem] leading-[0.9] tracking-tight uppercase font-neueBold hover:text-gold transition-colors duration-300"
+          variants={delayedFade}
+          initial="initial"
+          animate="enter"
+          transition={{ delay: 1 }}
+        >
+          Amcros
+          <br />
+          Events
+        </motion.h1>
+        <motion.p
+          variants={delayedFade}
+          initial="initial"
+          animate="enter"
+          transition={{ delay: 1 }}
+          className=" text-white text-sm md:text-lg font-neueLight italic"
+        >
+          A future where dreaming, creating, and undertaking
+          <br /> come together as acts of collective transformation.
+        </motion.p>
+      </div>
+    </section>
   );
 };

@@ -22,6 +22,10 @@ import thirdImage from "@/public/assets/images/8E2A8544.webp";
 import EventsVideo from "@videos/amcros-events.mov";
 import EventsVideo2 from "@videos/amcros-works.mp4";
 import { Asset } from "next-video/dist/assets.js";
+import MainEventSection from "@/components/section";
+import AmcrosEventsVideo from "@videos/amcros-events.mov";
+import Video from "next-video";
+import VideoSection from "@/components/events/videoSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,42 +71,16 @@ export const Events = () => {
     requestAnimationFrame(raf);
   }, []);
 
-  // ScrollTrigger horizontal scroll
-  useGSAP(
-    () => {
-      const wrapper = galleryWrapperRef.current;
-      const track = galleryTrackRef.current;
-
-      if (!wrapper || !track) return;
-
-      const totalScroll = track.scrollWidth - wrapper.offsetWidth;
-
-      gsap.to(track, {
-        x: -totalScroll,
-        ease: "none",
-        scrollTrigger: {
-          trigger: wrapper,
-          start: "center center",
-          end: () => `+=${track.scrollWidth}`,
-          scrub: true,
-          pin: true,
-          anticipatePin: 1,
-        },
-      });
-    },
-    { scope: container }
-  );
-
   return (
     <main ref={container} className="w-full">
       <EventsHero />
-      <MediaGrid medias={medias} columnsNum={2} />
       <Missons />
       <Highlight />
-
-      <MediaGrid medias={medias2} columnsNum={2} />
       <Actions />
-      <Partners />
+      <VideoSection />
+      {/* <MainEventSection /> */}
+
+      {/* <Partners /> */}
     </main>
   );
 };

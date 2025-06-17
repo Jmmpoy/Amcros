@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Actions = () => {
   return (
-    <section className=" px-6 flex justify-center bg-white text-brown py-16 lg:py-24 ">
+    <section className=" px-6 flex flex-col justify-center items-center bg-black text-white py-16 lg:py-24 h-[50vh]">
       <div className="max-w-4xl text-center">
         <FadeInWhenVisible>
           <motion.h2 className="text-xl md:text-3xl font-neueBold uppercase mb-6 hover:text-gold transition-colors duration-300">

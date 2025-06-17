@@ -151,6 +151,13 @@ p {
     display: none !important;
   }
 
+
+  
+ /* VIDEO */
+    media-theme-instaplay {
+      position: absolute !important;
+    }
+
   .project-image-card {
     animation: fadeIn 2s;
   }
