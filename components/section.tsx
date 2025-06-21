@@ -62,7 +62,7 @@ const Description = () => {
     <div className="w-full text-center mb-12">
       <FadeInWhenVisible>
         <motion.p
-          className="text-white font-neueRegular text-md sm:text-lg md:text-xl leading-relaxed max-w-4xl mx-auto"
+          className="text-white font-neueRegular text-xl sm:text-3xl  leading-relaxed max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
