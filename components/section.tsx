@@ -4,9 +4,8 @@ import Image from "next/image";
 import background from "@/public/assets/images/runway.jpg";
 import event1 from "@/public/assets/images/main-event.png";
 import event2 from "@/public/assets/images/event-2.jpg";
-import event3 from "@/public/assets/images/8E2A8989.webp";
-import event4 from "@/public/assets/images/8E2A8986.webp";
-import event5 from "@/public/assets/images/8E2A8544.webp";
+import event3 from "@/public/assets/images/event-3.png";
+import event4 from "@/public/assets/images/event-4.jpg";
 
 import { FadeInWhenVisible } from "./fadeInWhenVisible";
 
@@ -165,7 +164,6 @@ export default function Section() {
     { id: 2, src: event2, alt: "Événement secondaire" },
     { id: 3, src: event3, alt: "Événement 3" },
     { id: 4, src: event4, alt: "Événement 4" },
-    { id: 5, src: event5, alt: "Événement 5" },
   ];
 
   return (
