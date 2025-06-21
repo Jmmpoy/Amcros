@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Missons = () => {
   return (
-    <section className="bg-black text-white px-6  text-center flex flex-col items-center justify-center h-[50vh]">
+    <section className=" text-white px-6  text-center flex flex-col items-center justify-center  w-full mt-[35rem]">
       <div className="max-w-5xl space-y-20">
         <FadeInWhenVisible>
           <motion.p className="font-neueRegular text-xl sm:text-3xl leading-relaxed">

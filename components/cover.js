@@ -1,6 +1,6 @@
 "use client";
 import { m } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Logo from "./logo";
 import useIntro from "hooks/useIntro";
 
@@ -12,7 +12,20 @@ const Cover = ({ onFinish }) => {
   const [fadeButton, setFadeButton] = useState(false);
   const [startExit, setStartExit] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const showAnimation = useIntro();
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkIsMobile();
+    window.addEventListener("resize", checkIsMobile);
+
+    return () => window.removeEventListener("resize", checkIsMobile);
+  }, []);
+
   const handleLogoFadeComplete = () => {
     if (fadeLogo) setFadeButton(true);
   };
@@ -23,7 +36,7 @@ const Cover = ({ onFinish }) => {
 
   const handleButtonClick = () => setFadeLogo(true);
 
-  const buttonOpacity = fadeButton ? 0 : isHovered ? 1 : 0;
+  const buttonOpacity = fadeButton ? 0 : isHovered || isMobile ? 1 : 0;
 
   if (!showAnimation) return null;
   return (

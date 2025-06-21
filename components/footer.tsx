@@ -16,9 +16,9 @@ const copyright = {
 
 export default function Footer() {
   return (
-    <footer className="fixed bottom-0 w-full bg-[#F9F4EF] mb-0">
+    <footer className="fixed bottom-0 w-full bg-[#F9F4EF] mb-0 z-50">
       <Container>
-        <div className="py-4 flex flex-col md:flex-row justify-between md:items-center">
+        <div className="py-2 flex flex-col md:flex-row justify-between md:items-center">
           <motion.div
             className="mb-1 md:mb-0"
             variants={delayedFade}
@@ -35,7 +35,7 @@ export default function Footer() {
           </motion.div>
 
           <motion.div
-            className="flex justify-between sm:min-w-[250px]"
+            className=" justify-between sm:min-w-[250px] hidden md:visible md:flex"
             variants={delayedFade}
             initial="initial"
             animate="enter"

@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 const Partners = () => {
   return (
-    <section className="bg-black text-white px-6 flex justify-center text-center py-16 lg:py-24 h-[40vh]">
-      <div className="max-w-5xl w-full space-y-6">
+    <section className="bg-black text-white px-6 flex justify-center text-center py-24 lg:py-24 h-[40vh]">
+      <div className="max-w-5xl w-full space-y-6 flex flex-col items-center justify-center">
         <FadeInWhenVisible>
           <motion.h2 className="text-xl md:text-3xl font-neueBold uppercase mb-6 hover:text-gold transition-colors duration-300">
             Nos partenaires

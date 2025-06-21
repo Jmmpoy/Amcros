@@ -12,9 +12,11 @@
 /* Tailwind Utilities */
 @import "tailwindcss/utilities";
 
+@import "_embla.css";
+
 /* Simple defaults */
 body {
-  @apply font-sans antialiased text-black bg-white;
+  @apply font-sans antialiased text-black bg-black;
 }
 
 h1 {
@@ -85,37 +87,6 @@ p {
     transform: translateX(15px) !important;
   }
 
-  .line {
-    background: black;
-    width: 50%;
-    height: 0.5px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-font-space {
-    word-spacing: -20px;
-  }
-
-  .hero-font-space-small {
-    word-spacing: -12px;
-  }
-
-  .hero-font-size {
-    @media (max-width: 425px) {
-      font-size: 7vw;
-    }
-  }
-
-  .hero-404-font-size {
-    @media (max-width: 425px) {
-      font-size: 6vw;
-    }
-  }
 
   .arrow {
     opacity: 0%;
@@ -157,6 +128,12 @@ p {
     media-theme-instaplay {
       position: absolute !important;
     }
+
+    media-time-range {
+      opacity: 50% !important;
+    }
+
+ 
 
   .project-image-card {
     animation: fadeIn 2s;

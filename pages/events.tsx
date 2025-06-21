@@ -61,26 +61,13 @@ export const Events = () => {
   const galleryWrapperRef = useRef<HTMLDivElement>(null);
   const galleryTrackRef = useRef<HTMLUListElement>(null); // Ref pour le <ul>
 
-  // Lenis smooth scroll
-  useEffect(() => {
-    const lenis = new Lenis();
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-  }, []);
-
   return (
     <main ref={container} className="w-full">
       <EventsHero />
-      <Missons />
       <Highlight />
+      <MainEventSection />
       <Actions />
       <VideoSection />
-      {/* <MainEventSection /> */}
-
-      {/* <Partners /> */}
     </main>
   );
 };

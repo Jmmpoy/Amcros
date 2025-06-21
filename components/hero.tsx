@@ -3,18 +3,31 @@ import { motion } from "framer-motion";
 import Container from "@/components/container";
 import Navigation from "./header/navigation";
 import amcrosVideo from "@videos/amcrosInstitut.mp4";
+import amcrosVideoMobile from "@videos/amcros-events.mov";
 import Video from "next-video";
 import { useEffect, useRef, useState } from "react";
 import useIntro from "hooks/useIntro";
 
 export default function Hero({ canFade }: any) {
   const [hasSeenCover, setHasSeenCover] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const showAnimation = useIntro();
 
   useEffect(() => {
     const seen = sessionStorage.getItem("hasSeenCover");
     if (seen === "true") setHasSeenCover(true);
+  }, []);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkIsMobile();
+    window.addEventListener("resize", checkIsMobile);
+
+    return () => window.removeEventListener("resize", checkIsMobile);
   }, []);
 
   const menuItems = [
@@ -41,7 +54,7 @@ export default function Hero({ canFade }: any) {
       <div className="absolute inset-0">
         <Video
           ref={videoRef}
-          src={amcrosVideo}
+          src={isMobile ? amcrosVideoMobile : amcrosVideo}
           autoPlay
           loop
           muted
@@ -50,7 +63,7 @@ export default function Hero({ canFade }: any) {
           className="w-screen h-screen"
         />
         {/* OVERLAY NOIR */}
-        <div className="absolute inset-0 bg-black opacity-70" />
+        <div className="absolute inset-0 bg-black opacity-80" />
       </div>
 
       {/* CONTENU */}
