@@ -20,9 +20,9 @@ const manifesto = () => {
 
         <FadeInWhenVisible>
           <motion.p className="text-lg md:text-xl font-neueRegular">
-            Amcros Events est la branche événementielle d’AMCROS Institut,
-            pensée comme une plateforme où beauté, innovation et entrepreneuriat
-            se rencontrent pour inspirer, connecter et valoriser le potentiel
+            Amcros Events est la branche événementielle d’AMCROS, pensée comme
+            une plateforme où beauté, innovation et entrepreneuriat se
+            rencontrent pour inspirer, connecter et valoriser le potentiel
             africain, notamment congolais.
           </motion.p>
         </FadeInWhenVisible>
