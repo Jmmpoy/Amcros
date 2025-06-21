@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import { useCallback, useRef } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useCallback, useRef, useState } from "react";
 import Image from "next/image";
 import background from "@/public/assets/images/runway.jpg";
 import event1 from "@/public/assets/images/main-event.png";
@@ -11,6 +11,7 @@ import event5 from "@/public/assets/images/8E2A8544.webp";
 import { FadeInWhenVisible } from "./fadeInWhenVisible";
 
 import useEmblaCarousel from "embla-carousel-react";
+import Link from "next/link";
 
 // Composant pour l'image de fond avec overlay
 const BackgroundContainer = ({ children }: { children: React.ReactNode }) => {
@@ -56,11 +57,12 @@ const Title = () => {
 
 // Composant pour la description
 const Description = () => {
+  const [hovered, setHovered] = useState(false);
   return (
     <div className="w-full text-center mb-12">
       <FadeInWhenVisible>
         <motion.p
-          className="text-white font-neueRegular text-lg sm:text-xl md:text-2xl leading-relaxed max-w-4xl mx-auto"
+          className="text-white font-neueRegular text-md sm:text-lg md:text-xl leading-relaxed max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -71,6 +73,32 @@ const Description = () => {
           en lumière l'héritage et l'innovation du continent, tout en inspirant
           une nouvelle génération d'acteurs du changement.
         </motion.p>
+        <div
+          onMouseEnter={() => setHovered(!hovered)}
+          onMouseLeave={() => setHovered(!hovered)}
+          className="relative mx-2 text-lg lg:text-xl  text-white mt-10"
+        >
+          <Link
+            href="https://ponaevent.com/events/55/?fbclid=PAZXh0bgNhZW0CMTEAAad70NnqkUGeqJ7wFJ4y3wPSIfWOKaGz2D3Gwh18fsJlSGnyxAfcvinQ8MdHLw_aem_VUKcF3q6LV1SWuPq8mUEyg"
+            className="relative inline-block py-1 text-gold font-neueLight transition-colors duration-300 hover:text-[#C5A880]"
+          >
+            Billeterie de notre prochain évènement
+            <AnimatePresence>
+              {hovered && (
+                <motion.div
+                  className="absolute bottom-0 left-0 h-[1px] w-full bg-[#C5A880] origin-left"
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  exit={{ scaleX: 0 }}
+                  transition={{
+                    duration: 0.3,
+                    ease: [0.65, 0.05, 0.36, 1],
+                  }}
+                />
+              )}
+            </AnimatePresence>
+          </Link>
+        </div>
       </FadeInWhenVisible>
     </div>
   );
