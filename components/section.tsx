@@ -9,8 +9,7 @@ import event4 from "@/public/assets/images/8E2A8986.webp";
 import event5 from "@/public/assets/images/8E2A8544.webp";
 
 import { FadeInWhenVisible } from "./fadeInWhenVisible";
-import EmblaCarousel from "./EmblaCarousel";
-import { EmblaOptionsType } from "embla-carousel";
+
 import useEmblaCarousel from "embla-carousel-react";
 
 // Composant pour l'image de fond avec overlay
