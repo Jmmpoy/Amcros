@@ -9,7 +9,7 @@ const Missons = () => {
         <FadeInWhenVisible>
           <motion.p className="font-neueLight text-xl sm:text-3xl leading-relaxed">
             Amcros Events est la branche événementielle de
-            <strong> AMCROS Institut</strong>, pensée comme une plateforme où
+            <strong> AMCROS </strong>, pensée comme une plateforme où
             <strong> beauté</strong>, innovation et entrepreneuriat se
             rencontrent pour <strong>inspirer</strong>, connecter et valoriser
             le potentiel africain, notamment congolais.
