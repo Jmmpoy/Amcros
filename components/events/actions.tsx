@@ -2,7 +2,7 @@ import React from "react";
 import { FadeInWhenVisible } from "../fadeInWhenVisible";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import backgroundImage from "@/public/assets/images/events/event-3.jpg";
+import backgroundImage from "@/public/assets/images/events/event-3.png";
 
 const Actions = () => {
   return (

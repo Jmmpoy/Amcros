@@ -12,7 +12,7 @@ export const EventsHero = () => {
         <motion.div
           className="w-full h-full bg-cover bg-center"
           style={{
-            backgroundImage: 'url("/assets/images/events/event-1.JPG")',
+            backgroundImage: 'url("/assets/images/events/event-1.png")',
             backgroundPosition: "center center",
           }}
           variants={delayedFade}
