@@ -13,7 +13,6 @@ export const EventsHero = () => {
           className="w-full h-full bg-cover bg-center"
           style={{
             backgroundImage: 'url("/assets/images/events/event-1.png")',
-            backgroundPosition: "center center",
           }}
           variants={delayedFade}
           initial="initial"
@@ -23,9 +22,14 @@ export const EventsHero = () => {
       </motion.div>
 
       {/* Overlay + Texte */}
-      <div className="absolute inset-0 bg-opacity-70 bg-gradient-to-t from-black via-black/70 to-transparent flex flex-col justify-center items-start px-8 md:px-18 lg:px-24">
+      <div className="absolute inset-0 flex flex-col justify-center items-start px-8 md:px-18 lg:px-24">
+        {/* Dégradé du haut vers le bas */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/50 to-transparent pointer-events-none z-0"></div>
+        {/* Dégradé du bas vers le haut */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent pointer-events-none z-0"></div>
+
         <motion.h1
-          className="text-white text-7xl md:text-[10rem] lg:text-[11rem] leading-[0.9] tracking-tight uppercase font-neueBold hover:text-gold transition-colors duration-300"
+          className="relative z-20 text-white text-7xl md:text-[10rem] lg:text-[11rem] leading-[0.9] tracking-tight uppercase font-neueLight hover:text-gold transition-colors duration-300"
           variants={delayedFade}
           initial="initial"
           animate="enter"
@@ -40,13 +44,15 @@ export const EventsHero = () => {
           initial="initial"
           animate="enter"
           transition={{ delay: 3 }}
-          className=" text-white text-sm md:text-lg font-neueLight italic"
+          className="relative z-20 text-white text-sm md:text-lg font-neueLight italic"
         >
           A future where dreaming, creating, and undertaking
           <br /> come together as acts of collective transformation.
         </motion.p>
 
-        <Missons />
+        <div className="relative z-20 mx-auto">
+          <Missons />
+        </div>
       </div>
     </section>
   );

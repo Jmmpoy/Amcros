@@ -82,7 +82,7 @@ export default function Hero({ canFade }: any) {
       <motion.main className="relative z-10 h-screen flex flex-col justify-center items-center px-6">
         <div className="w-full sm:min-w-[550px] md:w-1/2 md:max-w-3xl text-center">
           <motion.p
-            className="mb-0 font-neueBold uppercase sm:mb-3 text-5xl lg:text-8xl text-white hover:text-[#C5A880] transition-colors duration-300"
+            className="mb-0 font-neueLight uppercase sm:mb-3 text-5xl lg:text-8xl text-white hover:text-[#C5A880] transition-colors duration-300"
             key="amcros-title"
             initial={{ opacity: 0 }}
             animate={{ opacity: shouldFade ? 1 : 0 }}

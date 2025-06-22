@@ -30,7 +30,7 @@ export const HeroSection = () => {
 
         <div className="relative z-10">
           <motion.h1
-            className="text-white text-7xl md:text-[10rem] lg:text-[11rem] leading-[0.9] tracking-tight uppercase font-neueBold hover:text-gold transition-colors duration-300"
+            className="text-white text-7xl md:text-[10rem] lg:text-[11rem] leading-[0.9] tracking-tight uppercase font-neueLight hover:text-gold transition-colors duration-300"
             variants={delayedFade}
             initial="initial"
             animate="enter"

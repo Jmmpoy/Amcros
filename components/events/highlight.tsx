@@ -21,7 +21,7 @@ const Highlight = () => {
 
         <div className="relative z-10 mx-auto">
           <FadeInWhenVisible>
-            <motion.p className="text-white font-neueRegular text-xl sm:text-3xl leading-relaxed max-w-5xl w-full mx-auto text-center">
+            <motion.p className="text-white font-neueLight text-xl sm:text-3xl leading-relaxed max-w-5xl w-full mx-auto text-center">
               L'événement « Entreprendre et innover à travers le monde »,
               coorganisé avec <strong>ELLE Côte d'Ivoire</strong>, a marqué un
               tournant. Il a réuni <strong>Harish Jegtani</strong>,

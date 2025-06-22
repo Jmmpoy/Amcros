@@ -43,7 +43,7 @@ const Title = () => {
   return (
     <div className="text-center mb-8">
       <motion.h2
-        className="text-white text-xl md:text-3xl font-neueBold uppercase hover:text-gold transition-colors duration-300"
+        className="text-white text-xl md:text-3xl font-neueRegular uppercase hover:text-gold transition-colors duration-300"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -61,7 +61,7 @@ const Description = () => {
     <div className="w-full text-center mb-12">
       <FadeInWhenVisible>
         <motion.p
-          className="text-white font-neueRegular text-xl sm:text-3xl  leading-relaxed max-w-4xl mx-auto"
+          className="text-white font-neueLight text-xl sm:text-3xl  leading-relaxed max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}

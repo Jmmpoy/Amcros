@@ -23,7 +23,7 @@ export const Manifesto = () => {
         <div className="relative z-10 text-center max-w-4xl">
           <FadeInWhenVisible>
             <motion.h2
-              className="text-white text-4xl md:text-6xl font-neueBold uppercase mb-8 leading-tight tracking-tight"
+              className="text-white text-4xl md:text-6xl font-neueLight uppercase mb-8 leading-tight tracking-tight"
               variants={delayedFade}
               initial="initial"
               animate="enter"
@@ -35,7 +35,7 @@ export const Manifesto = () => {
           </FadeInWhenVisible>
 
           <FadeInWhenVisible>
-            <motion.p className="text-white font-neueRegular text-lg md:text-xl leading-relaxed">
+            <motion.p className="text-white font-neueLight text-lg md:text-xl leading-relaxed">
               Amcros est une industrie congolaise fondée en 2024 par Clarisse
               Tshisekedi Ilunga, jeune entrepreneure passionnée de beauté, de
               communication et d'innovation. Profondément attachée à Kinshasa,

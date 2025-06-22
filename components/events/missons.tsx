@@ -7,7 +7,7 @@ const Missons = () => {
     <section className=" text-white px-6  text-center flex flex-col items-center justify-center  w-full mt-[35rem]">
       <div className="max-w-5xl space-y-20">
         <FadeInWhenVisible>
-          <motion.p className="font-neueRegular text-xl sm:text-3xl leading-relaxed">
+          <motion.p className="font-neueLight text-xl sm:text-3xl leading-relaxed">
             Amcros Events est la branche événementielle de
             <strong> AMCROS Institut</strong>, pensée comme une plateforme où
             <strong> beauté</strong>, innovation et entrepreneuriat se
@@ -17,7 +17,7 @@ const Missons = () => {
         </FadeInWhenVisible>
 
         <FadeInWhenVisible>
-          <motion.p className="font-neueRegular text-xl sm:text-3xl leading-relaxed">
+          <motion.p className="font-neueLight text-xl sm:text-3xl leading-relaxed">
             Notre mission est claire :{" "}
             <strong>créer des événements d’exception</strong>, porteurs de sens
             et d’impact, qui célèbrent le talent, la créativité et l’excellence

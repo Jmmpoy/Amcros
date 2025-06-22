@@ -22,13 +22,13 @@ const Actions = () => {
 
       <div className="relative z-10 max-w-4xl text-center">
         <FadeInWhenVisible>
-          <motion.h2 className="text-xl md:text-3xl font-neueBold uppercase mb-6 hover:text-gold transition-colors duration-300">
+          <motion.h2 className="text-xl md:text-3xl font-neueRegular uppercase mb-6 hover:text-gold transition-colors duration-300">
             Nos domaines d'action
           </motion.h2>
         </FadeInWhenVisible>
 
         <FadeInWhenVisible>
-          <ul className="list-none list-inside font-neueRegular text-lg space-y-2">
+          <ul className="list-none list-inside font-neueLight text-lg space-y-2">
             <li>Beauté (avec l'ouverture prochaine de AMCROS Institut)</li>
             <li>Entrepreneuriat</li>
             <li>Influence & médias</li>

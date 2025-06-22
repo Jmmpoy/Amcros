@@ -21,13 +21,13 @@ export const Events = () => {
 
         <div className="relative z-10">
           <FadeInWhenVisible>
-            <motion.h2 className="text-white text-4xl md:text-7xl font-neueBold uppercase mb-4">
+            <motion.h2 className="text-white text-4xl md:text-6xl font-neueLight uppercase mb-4">
               Repousser les
               <br /> limites de <br /> l'innovation
             </motion.h2>
           </FadeInWhenVisible>
           <FadeInWhenVisible>
-            <motion.p className="text-white font-neueRegular text-lg md:text-xl max-w-2xl">
+            <motion.p className="text-white font-neueLight text-lg md:text-xl max-w-2xl">
               Le Grand Salon de Beauté (octobre 2024) et l'événement "Innover et
               Entreprendre" ont marqué les débuts d'Amcros. Ils ont su fédérer
               des figures influentes autour de l'impact, la beauté et

@@ -9,7 +9,7 @@ const manifesto = () => {
       <div className="max-w-4xl text-center space-y-8">
         <FadeInWhenVisible>
           <motion.h2
-            className="text-2xl md:text-3xl font-neueBold uppercase leading-tight tracking-tight hover:text-gold transition-colors duration-300"
+            className="text-2xl md:text-3xl font-neueRegular uppercase leading-tight tracking-tight hover:text-gold transition-colors duration-300"
             variants={delayedFade}
             initial="initial"
             animate="enter"
@@ -19,7 +19,7 @@ const manifesto = () => {
         </FadeInWhenVisible>
 
         <FadeInWhenVisible>
-          <motion.p className="text-lg md:text-xl font-neueRegular">
+          <motion.p className="text-lg md:text-xl font-neueLight">
             Amcros Events est la branche événementielle d’AMCROS, pensée comme
             une plateforme où beauté, innovation et entrepreneuriat se
             rencontrent pour inspirer, connecter et valoriser le potentiel
