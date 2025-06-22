@@ -1,8 +1,8 @@
 import { FadeInWhenVisible } from "../fadeInWhenVisible";
 import Image from "next/image";
-import eventsSection from "@/public/assets/images/events/event-4.jpg";
+import eventsSection from "@/public/assets/images/events/event-4.png";
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Highlight = () => {
   return (
