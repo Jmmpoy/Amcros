@@ -12,8 +12,8 @@ export const EventsHero = () => {
         <motion.div
           className="w-full h-full bg-cover bg-center"
           style={{
-            backgroundImage: 'url("/assets/images/events.png")',
-            backgroundPosition: "30% 20%",
+            backgroundImage: 'url("/assets/images/events/event-1.JPG")',
+            backgroundPosition: "center center",
           }}
           variants={delayedFade}
           initial="initial"
@@ -23,7 +23,7 @@ export const EventsHero = () => {
       </motion.div>
 
       {/* Overlay + Texte */}
-      <div className="absolute inset-0 bg-opacity-70 bg-gradient-to-t from-black via-black/50 to-transparent flex flex-col justify-center items-start px-8 md:px-18 lg:px-24">
+      <div className="absolute inset-0 bg-opacity-70 bg-gradient-to-t from-black via-black/70 to-transparent flex flex-col justify-center items-start px-8 md:px-18 lg:px-24">
         <motion.h1
           className="text-white text-7xl md:text-[10rem] lg:text-[11rem] leading-[0.9] tracking-tight uppercase font-neueBold hover:text-gold transition-colors duration-300"
           variants={delayedFade}

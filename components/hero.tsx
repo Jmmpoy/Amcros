@@ -31,10 +31,24 @@ export default function Hero({ canFade }: any) {
   }, []);
 
   const menuItems = [
-    { title: "Selected Works", url: "/works" },
-    { title: "About", url: "/about" },
-    { title: "Amcros Events", url: "/events" },
-    { title: "Instagram", url: "https://www.instagram.com/amcros.events/" },
+    { title: "Réalisations", url: "/works", type: "text" as const },
+    { title: "About", url: "/about", type: "text" as const },
+    { title: "Amcros Events", url: "/events", type: "text" as const },
+    {
+      title: "Instagram",
+      url: "https://www.instagram.com/amcros.events/",
+      type: "logo" as const,
+    },
+    {
+      title: "Tiktok",
+      url: "https://www.tiktok.com/@amcros.events?_t=ZG-8xOLVEmH3XU&_r=1",
+      type: "logo" as const,
+    },
+    {
+      title: "Facebook",
+      url: "https://www.facebook.com/people/Amcrosinstitut/61564426320328/?mibextid=wwXIfr&rdid=opv5oQSoMrqVoOLt&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1F2Da6DgWa%2F%3Fmibextid%3DwwXIfr",
+      type: "logo" as const,
+    },
   ];
 
   useEffect(() => {
@@ -43,8 +57,6 @@ export default function Hero({ canFade }: any) {
       video.muted = true;
     }
   }, []);
-
-  console.log("showanim", showAnimation);
 
   const shouldFade = canFade || !showAnimation;
 

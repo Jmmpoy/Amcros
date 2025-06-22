@@ -1,6 +1,6 @@
 import { FadeInWhenVisible } from "../fadeInWhenVisible";
 import Image from "next/image";
-import eventsSection from "@/public/assets/images/event-bleu.jpg";
+import eventsSection from "@/public/assets/images/events/event-4.jpg";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 

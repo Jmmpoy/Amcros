@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useRef, useState } from "react";
 import Image from "next/image";
-import background from "@/public/assets/images/runway.jpg";
+import background from "@/public/assets/images/events/event-2.jpg";
 import event1 from "@/public/assets/images/main-event.png";
 import event2 from "@/public/assets/images/event-2.jpg";
 import event3 from "@/public/assets/images/event-3.png";
