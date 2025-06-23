@@ -7,7 +7,7 @@ import amcrosVideo2 from "@videos/amcros-works-2.mp4";
 import { motion } from "framer-motion";
 import useEmblaCarousel from "embla-carousel-react";
 import amcrosPoster from "@/public/assets/images/8E2A8989.webp";
-import amcrosPoster2 from "@/public/assets/images/8E2A8473.webp";
+import amcrosPoster2 from "@/public/assets/images/events-hero.webp";
 
 const pageVariants = {
   initial: { opacity: 0 },
