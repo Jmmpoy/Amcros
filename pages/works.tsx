@@ -4,10 +4,10 @@ import React from "react";
 import Video from "next-video";
 import amcrosVideo from "@videos/amcros-works.mp4";
 import amcrosVideo2 from "@videos/amcros-works-2.mp4";
-import Instaplay from "player.style/instaplay/react";
 import { motion } from "framer-motion";
 import useEmblaCarousel from "embla-carousel-react";
 import amcrosPoster from "@/public/assets/images/8E2A8989.webp";
+import amcrosPoster2 from "@/public/assets/images/8E2A8473.webp";
 
 const pageVariants = {
   initial: { opacity: 0 },
@@ -26,10 +26,12 @@ const videoList = [
   {
     src: amcrosVideo,
     alt: "Amcros Works 1",
+    poster: amcrosPoster,
   },
   {
     src: amcrosVideo2,
     alt: "Amcros Works 2",
+    poster: amcrosPoster2,
   },
 ];
 
@@ -134,7 +136,7 @@ const Works = () => {
                         controls
                         muted
                         loop
-                        poster={amcrosPoster}
+                        poster={video.poster}
                       />
                     </div>
                   ))}
