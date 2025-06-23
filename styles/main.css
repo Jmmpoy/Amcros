@@ -160,12 +160,12 @@ p {
   }
 
     .h-screen-minus-footer {
-      height: calc(100vh - 78px);
+      height: calc(100vh - 40px);
     }
   
     @media (min-width: 768px) {
       .h-screen-minus-footer {
-        height: calc(100vh - 56px);
+        height: calc(100vh - 40px);
       }
     }
 }
