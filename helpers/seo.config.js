@@ -14,7 +14,7 @@ export default {
       "Amcros — là où l’élégance rencontre la grâce, et où chaque femme repart empreinte de puissance, de raffinement et de respect.",
     images: [
       {
-        url: "/images/OG.png",
+        url: "https://www.amcros.com/assets/images/events/event-1.png",
         width: 1600,
         height: 900,
         alt: `Amcros CEO`,
