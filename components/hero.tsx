@@ -7,6 +7,7 @@ import amcrosVideoMobile from "@videos/amcros-events.mov";
 import Video from "next-video";
 import { useEffect, useRef, useState } from "react";
 import useIntro from "hooks/useIntro";
+import amcrosVideoPoster from "public/assets/images/8E2A8316.webp";
 
 export default function Hero({ canFade }: any) {
   const [hasSeenCover, setHasSeenCover] = useState(false);
@@ -57,7 +58,6 @@ export default function Hero({ canFade }: any) {
       video.muted = true;
     }
   }, []);
-
   const shouldFade = canFade || !showAnimation;
 
   return (
@@ -73,6 +73,7 @@ export default function Hero({ canFade }: any) {
           playsInline
           controls={false}
           className="w-screen h-screen"
+          poster={amcrosVideoPoster}
         />
         {/* OVERLAY NOIR */}
         <div className="absolute inset-0 bg-black opacity-80" />
