@@ -26,10 +26,9 @@ export default function About() {
 
   return (
     <div className="mx-auto w-full">
-      <NextSeo title="About" description="About Amcros" />
+      <NextSeo title="À propos" description="À propos d’Amcros" />
       <HeroSection />
       <Manifesto />
-      {/* <Section /> */}
       <Events />
       <Vision />
     </div>

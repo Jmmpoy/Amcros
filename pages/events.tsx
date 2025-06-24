@@ -13,6 +13,7 @@ import secondImage from "@/public/assets/images/8E2A8989.webp";
 import EventsVideo2 from "@videos/amcros-works.mp4";
 import MainEventSection from "@/components/section";
 import VideoSection from "@/components/events/videoSection";
+import { NextSeo } from "next-seo";
 
 export interface Media {
   mediaType: string;
@@ -25,6 +26,7 @@ export const Events = () => {
 
   return (
     <main ref={container} className="w-full">
+      <NextSeo title="Amcros Events" description="Amcros Events" />
       <EventsHero />
       <Highlight />
       <MainEventSection />

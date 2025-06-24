@@ -1,19 +1,19 @@
 export default {
-  defaultTitle: "Amcros Institut",
+  defaultTitle: "Amcros",
   description:
-    "Amcros — where elegance meets grace, and every woman departs empowered, refined, and revered.",
-  titleTemplate: "Amcros Institut",
+    "Amcros — là où l’élégance rencontre la grâce, et où chaque femme repart empreinte de puissance, de raffinement et de respect.",
+  titleTemplate: "Amcros",
   openGraph: {
     type: "website",
-    locale: "en_GB",
-    url: "https://sg-next-tailwind-motion.vercel.app/",
-    site_name: "Amcros institut",
+    locale: "fr_FR",
+    url: "https://www.amcros.com/",
+    site_name: "Amcros",
     images: [
       {
-        url: "/images/social.jpg",
+        url: "/images/events/event-1.png",
         width: 1600,
         height: 900,
-        alt: `Homa Logo`,
+        alt: `Amcros Logo`,
       },
     ],
   },

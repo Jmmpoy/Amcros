@@ -33,7 +33,7 @@ export default function Hero({ canFade }: any) {
 
   const menuItems = [
     { title: "Réalisations", url: "/works", type: "text" as const },
-    { title: "About", url: "/about", type: "text" as const },
+    { title: "À propos", url: "/about", type: "text" as const },
     { title: "Amcros Events", url: "/events", type: "text" as const },
     {
       title: "Instagram",

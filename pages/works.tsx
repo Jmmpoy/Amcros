@@ -117,7 +117,7 @@ const Works = () => {
       className="relative"
     >
       <Container extraClasses="Content-Container h-screen-minus-footer py-12 overflow-auto md:overflow-hidden">
-        <NextSeo title="Selected Works" description="Amcros Selected Works" />
+        <NextSeo title="Réalisations" description="Nos réalisations" />
 
         {/* VIDEO CAROUSEL */}
         <div className="w-full flex justify-center items-center min-h-[80vh] h-full">
