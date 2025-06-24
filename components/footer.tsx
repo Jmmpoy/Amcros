@@ -4,8 +4,8 @@ import { delayedFade } from "@/helpers/transitions";
 import Link from "next/link";
 
 const footerLinks = [
-  { title: "Legal Notice", href: "/legal" },
-  { title: "Privacy Policy", href: "/privacy" },
+  { title: "Mentions Légales", href: "/legal" },
+  { title: "Politique de confidentialité", href: "/privacy" },
   { title: "By 350Lab", href: "https://www.350lab.com/" },
 ];
 
@@ -35,7 +35,7 @@ export default function Footer() {
           </motion.div>
 
           <motion.div
-            className=" justify-between sm:min-w-[250px] hidden md:visible md:flex"
+            className="justify-between sm:min-w-[250px] hidden md:visible md:flex gap-[10px]"
             variants={delayedFade}
             initial="initial"
             animate="enter"

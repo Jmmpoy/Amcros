@@ -7,7 +7,6 @@ import Cover from "@/components/cover";
 
 export default function Home() {
   const containerRef = useRef(null);
-  const [showCover, setShowCover] = useState(true);
   const [canFade, setCanFade] = useState(false);
   const onCoverAnimationComplete = () => {
     setCanFade(true);
@@ -15,7 +14,7 @@ export default function Home() {
 
   return (
     <Layout class="no-scrollbar">
-      <NextSeo title="Amcros" description="Amcros HomePage" />
+      <NextSeo title="Amcros" description="Page d’accueil" />
       <div data-scroll-container ref={containerRef} id="scroll-container">
         <div data-scroll-section>
           <LazyMotion features={domAnimation}>
