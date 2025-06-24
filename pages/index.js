@@ -14,7 +14,10 @@ export default function Home() {
 
   return (
     <Layout class="no-scrollbar">
-      <NextSeo title="Amcros" description="Page d’accueil" />
+      <NextSeo
+        title="Amcros"
+        description="Amcros — là où l’élégance rencontre la grâce, et où chaque femme repart empreinte de puissance, de raffinement et de respect."
+      />
       <div data-scroll-container ref={containerRef} id="scroll-container">
         <div data-scroll-section>
           <LazyMotion features={domAnimation}>
